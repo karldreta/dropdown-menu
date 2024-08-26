@@ -33,20 +33,56 @@ header {
   gap: 20px;
 }
 
-.navButtons > ul > li {
-  list-style: none;
+.buttonContainer {
+  position: relative;
   width: 120px;
   height: min-content;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.navButtons > ul .dropdownButton{
   padding: 10px 20px;
   border: 2px solid black;
   cursor: pointer;
+  list-style: none;
+  text-align: center;
 }
 
-.navButtons > ul > li:hover {
+.navButtons > ul .dropdownButton:hover {
   background-color: rgba(218, 165, 32, 0.61);
 }
 
-.navButtons > ul > li:active {
+.navButtons > ul .dropdownButton:active {
   opacity: .7;
+}
+
+.dropdownContent {
+  position: absolute;
+  transform: translateY(70%);
+  background-color: white;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  box-shadow: 1px 1px 5px black;
+  padding: 5px 2px;
+}
+
+.dropdownContent ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.dropdownContent li {
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  padding-left: 4px;
+}
+
+.dropdownContent li:hover {
+  background-color: gold;
+  cursor: pointer;
 }
